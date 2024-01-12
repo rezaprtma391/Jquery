@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Jquery</h1>
+    <ul>
+      <li class="jkt">
+        Jakarta <button class="alert">klik</button>
+        <button class="hide">h</button>
+        <button class="remove">x</button>
+      </li>
+      <li class="bdg">Bandung</li>
+      <li class="sby">Surabaya</li>
+    </ul>
+    <button class="yyy">toggle</button>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("h1").html("<b>hello</b>");
+        // $(".jkt").remove()
+        // $(".bdg").empty().append("<b>Kuningan</b>")
+        $(".alert").on("click", function () {
+          alert("berhasil!");
+        });
+        $(".remove").on("click", function () {
+          alert("berhasil");
+          $(".jkt").remove();
+        });
+        $(".hide").on("click", function () {
+          $(".jkt").slideUp(5000);
+        });
+        $(".yyy").on("click", function () {
+          $(".jkt").animate({
+            marginLeft: 2000
+        });
+        });
+      });
+    </script>
+  </body>
+</html>

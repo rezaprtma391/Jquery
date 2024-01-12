@@ -5,5 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jquery</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Where do want to go?</h1>
+    <h2>Travel Destinations</h2>
+    <p class="para">Plan your next adventure</p>
+    <p>Rome, Paris or Rio?</p>
+    <button>Aksi</button>
+    <ul id="list">
+      <li class="ibukota">Jakarta</li>
+      <li>Bali</li>
+      <li>Surabaya</li>
+      <li>Bandung</li>
+    </ul>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("p").hide();
+        });
+      });
+      console.log("Jquery Nya Sudah Jalan");
+      $("li").first().text("Indonesia");
+      const coba = $("<li>Tes</li>");
+      // $("#list").append(coba);
+      coba.appendTo("#list");
+      // $("p").text("Orlando")
+      const h3 = $("<h3>Menambahkan h3</h3>");
+      $(".para").before(h3)
+    </script>
+    <!-- <script> -->
+    <!-- Wajib!!! -->
+    <!-- $(document).ready(function () { -->
+    <!--  Kode Jquery -->
+    <!-- }); -->
+    <!-- </script> -->
+  </body>
 </html>
